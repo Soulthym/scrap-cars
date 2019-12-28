@@ -1,3 +1,4 @@
+#! /bin/python3
 from pprint import pprint
 from selenium import webdriver
 from selenium.webdriver.common.by import By
