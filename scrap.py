@@ -20,3 +20,10 @@ for i in range(86):
     details = driver.find_element_by_xpath(f"/html/body/div[1]/section[2]/div[1]/div[2]/div[{i+1}]/div[1]/a[1]")
     IDs.append(details.get_attribute("href").strip().strip("/").split("/")[-1])
     print(IDs[-1])
+##
+for ID in IDs:
+    comparator_url = f"https://www.cars.com/research/compare/?vehicles={ID}"
+    driver.get(comparator_url)
+    print(f"{ID=}\t: {comparator_url=}")
+
+driver.close()
